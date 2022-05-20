@@ -15,6 +15,10 @@ return new class extends Migration
     {
         Schema::create('snacks', function (Blueprint $table) {
             $table->id();
+            $table->string('imagen');
+            $table->string('nombre');
+            $table->integer('puntaje');
+            $table->integer('precio');
             $table->timestamps();
         });
     }
