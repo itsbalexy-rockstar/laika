@@ -14,7 +14,8 @@ class AccesorioController extends Controller
      */
     public function index()
     {
-        //
+        $accesorios = Accesorio::all();
+        return response()->json($accesorios);
     }
 
     /**

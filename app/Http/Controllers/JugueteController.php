@@ -14,7 +14,8 @@ class JugueteController extends Controller
      */
     public function index()
     {
-        //
+        $juguetes = Juguete::all();
+        return response()->json($juguetes);
     }
 
     /**

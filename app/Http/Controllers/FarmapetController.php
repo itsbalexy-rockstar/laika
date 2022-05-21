@@ -14,7 +14,8 @@ class FarmapetController extends Controller
      */
     public function index()
     {
-        //
+        $farmapets = Farmapet::all();
+        return response()->json($farmapets);
     }
 
     /**
