@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid bg fixed">
+    <div class="container-fluid bg fixed m-0 p-0">
         <!-- primer navbar -->
             <NavbarInfo />
         <!-- segundo navbar -->

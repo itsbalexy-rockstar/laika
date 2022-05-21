@@ -67,6 +67,7 @@
                 class="bg-btn-members mx-2 p-2 border-0 rounded bg text-light"
             >
                 <i class="fa-solid fa-crown fa-xl mx-2"></i>LAIKA Member
+                <span class="bg-span p-1 rounded text-dark">ADQUIERELO YA</span>
             </button>
         </div>
     </div>
@@ -80,4 +81,9 @@ export default {
     }
 }
 </script>
+<style>
+.bg-span{
+    background-color: #ffcb02;
+}
+</style>
 

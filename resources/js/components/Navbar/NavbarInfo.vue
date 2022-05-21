@@ -1,6 +1,6 @@
 <template>
     <div
-        class="d-flex justify-content-around align-items-center text-light pt-2 bg"
+        class="d-flex justify-content-around align-items-center text-light pt-2 bg-dark"
     >
         <div class="d-flex flex-row">
             <p class="mx-2">
