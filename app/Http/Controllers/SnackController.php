@@ -14,7 +14,8 @@ class SnackController extends Controller
      */
     public function index()
     {
-        //
+        $snacks = Snack::all();
+        return response()->json($snacks);
     }
 
     /**
