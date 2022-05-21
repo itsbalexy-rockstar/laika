@@ -17,3 +17,11 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Routes for the API
+Route::resource('/accesorios', App\Http\Controllers\AccesorioController::class)->only(['index']);
+Route::resource('/alimentos', App\Http\Controllers\AlimentoController::class)->only(['index']);
+Route::resource('/cuidados', App\Http\Controllers\CuidadoController::class)->only(['index']);
+Route::resource('/farmapets', App\Http\Controllers\FarmapetController::class)->only(['index']);
+Route::resource('/jueguetes', App\Http\Controllers\JugueteController::class)->only(['index']);
+Route::resource('/snacks', App\Http\Controllers\SnackController::class)->only(['index']);

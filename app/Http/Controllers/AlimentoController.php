@@ -14,7 +14,8 @@ class AlimentoController extends Controller
      */
     public function index()
     {
-        //
+        $alimentos = Alimento::all();
+        return response()->json($alimentos);
     }
 
     /**

@@ -14,7 +14,8 @@ class CuidadoController extends Controller
      */
     public function index()
     {
-        //
+        $cuidados = Cuidado::all();
+        return response()->json($cuidados);
     }
 
     /**
