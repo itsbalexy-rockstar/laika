@@ -3,6 +3,7 @@
         <Navbar />
         <Carousel />
         <Categories />
+        <Shop />
         <Footer />
         <BannerFooter />
     </div>
@@ -13,6 +14,7 @@ import Carousel from "./Carousel/Carousel.vue";
 import Footer from "./Footer/Footer.vue";
 import BannerFooter from "./Banners/BannerFooter.vue";
 import Categories from "./Banners/Categories.vue";
+import Shop from "./Shop/Shop.vue";
 
 export default {
     components: {
@@ -20,7 +22,8 @@ export default {
         Carousel,
         Footer,
         BannerFooter,
-        Categories
+        Categories,
+        Shop,
     },
 };
 </script>
