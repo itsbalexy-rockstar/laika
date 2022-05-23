@@ -1,41 +1,29 @@
 <template>
-    <div class="container-fluid bg fixed m-0 p-0">
+    <div class="screen">
         <!-- primer navbar -->
-            <NavbarInfo />
+        <NavbarInfo />
         <!-- segundo navbar -->
-            <NavbarSearch />
-        <!-- tercer navbar -->
-            <NavbarOptions />
+        <NavbarSearch />
     </div>
 </template>
 <script>
-import NavbarInfo from './NavbarInfo.vue'
-import NavbarSearch from './NavbarSearch.vue'
-import NavbarOptions from './NavbarOptions.vue'
-
+import NavbarInfo from "./NavbarInfo.vue";
+import NavbarSearch from "./NavbarSearch.vue";
 export default {
     components: {
         NavbarInfo,
         NavbarSearch,
-        NavbarOptions
     },
-}
+};
 </script>
 
-<style>
-.bg {
-    background-color: #5f3e85;
-}
-.bg.darken-4 {
-    filter: brightness(0.6);
-}
-.bg-btn-vet {
-    background-color: #496aff;
-}
-.text-color {
-    color: #5f3e85;
-}
-.text-color:hover{
-    color: #5f3e85;
+<style scoped>
+.screen {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
 }
 </style>

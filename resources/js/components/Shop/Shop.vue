@@ -1,41 +1,45 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <div
-                class="col m-4 p-3 border rounded d-flex flex-column justify-content-center align-items-center"
-                v-for="articulo in articulos"
-                :key="articulo.id"
-            >
-                <img :src="articulo.imagen" alt="" class="img rounded" />
-                <p class="text-center text-uppercase">{{ articulo.nombre }}</p>
-                <div class="d-flex m-2">
-                    <i class="fa-solid fa-star fa-xl text-warning"></i>
-                    <i class="fa-solid fa-star fa-xl text-warning"></i>
-                    <i class="fa-solid fa-star fa-xl text-warning"></i>
-                    <i class="fa-solid fa-star fa-xl text-warning"></i>
-                    <i class="fa-solid fa-star fa-xl text-warning"></i>
-                </div>
-                <div class="d-flex flex-column justify-content-center align-items-center">
-                    <p class="mt-5">${{ articulo.precio }}</p>
-                    <div class="d-flex flex-row">
-                        <button><i class="fa-solid fa-crown fa-sm mx-2 text-warning"></i>LAIKA Member</button>
-                        <button class="btn bg-warning">ADQUIERELO YA</button>
-                    </div>
-                    <!-- <button
-                        class="w-25 d-flex flex-column bg-btn-members border-0 rounded bg text-light"
+    <div class="card-group">
+        <div
+            class="card center m-2 card-details rounded-5"
+            v-for="articulo in articulos"
+            :key="articulo.id"
+        >
+            <img
+                :src="articulo.imagen"
+                class="card-img-top img rounded-circle mtb"
+                alt="..."
+            />
+            <div class="card-body center">
+                <div class="d-flex flex-md-row flex-column align-items-center">
+                    <h3 class="card-title text-uppercase mtb fs-6 fs-md-2">
+                        {{ articulo.nombre }}
+                    </h3>
+                    <button
+                        class="rounded-circle mx-1 mx-md-2 bg-warning border-0 p-1 p-md-2"
                     >
-                        <span>
-                            <i class="fa-solid fa-crown fa-sm"></i>LAIKA Member
-                        </span>
-                        <span class="bg-span rounded text-dark"
-                            >ADQUIERELO YA</span
-                        >
-                    </button> -->
+                        <i class="fa-solid fa-cart-plus fa-xl text-dark"></i>
+                    </button>
                 </div>
-                <button class="p-3 btn-cart">
-                    <i class="fa-solid fa-cart-arrow-down fa-xl mx-2"></i>Añadir
-                    al carrito
-                </button>
+                <div class="d-flex mtb">
+                    <i class="fa-solid fa-star fa-sm text-warning"></i>
+                    <i class="fa-solid fa-star fa-sm text-warning"></i>
+                    <i class="fa-solid fa-star fa-sm text-warning"></i>
+                    <i class="fa-solid fa-star fa-sm text-warning"></i>
+                    <i class="fa-solid fa-star fa-sm text-warning"></i>
+                </div>
+                <span class="mtb fw-bold fs-5 fs-md-3"
+                    >$ {{ articulo.precio }}</span
+                >
+                <div class="d-flex">
+                    <p class="bg-warning mx-md-2">
+                        <i class="fa-solid fa-crown fa-sm mx-md-2"></i
+                        ><span class="mx-2">Laika MEMBER</span>
+                    </p>
+                    <p class="text-center fw-bold mx-md-2">
+                        $ {{ articulo.precio - articulo.precio * 0.1 }}
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -54,36 +58,29 @@ export default {
         async getArticulos() {
             const response = await axios.get("api/snacks");
             this.articulos = response.data;
-            console.log(this.articulos);
         },
     },
 };
 </script>
 <style scoped>
+.center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .img {
-    width: 250px;
-    height: 300px;
+    width: 100px;
+    height: 100px;
 }
-.btn{
-    border: none;
-    color: black;
-    font-size: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
-}
-span{
-    font-size: 10px;
-}
-button{
-    border: none;
+.background {
     background-color: #5f3e85;
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 5px;
+}
+.mtb {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.card-details {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
