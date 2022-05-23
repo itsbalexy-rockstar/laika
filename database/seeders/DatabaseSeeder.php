@@ -15,11 +15,11 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // \App\Models\User::factory(10)->create();
-        \App\Models\Accesorio::factory(20)->create();
-        \App\Models\Alimento::factory(20)->create();
-        \App\Models\Cuidado::factory(20)->create();
-        \App\Models\Farmapet::factory(20)->create();
-        \App\Models\Juguete::factory(20)->create();
-        \App\Models\Snack::factory(20)->create();
+        \App\Models\Accesorio::factory(6)->create();
+        \App\Models\Alimento::factory(6)->create();
+        \App\Models\Cuidado::factory(6)->create();
+        \App\Models\Farmapet::factory(6)->create();
+        \App\Models\Juguete::factory(6)->create();
+        \App\Models\Snack::factory(6)->create();
     }
 }
