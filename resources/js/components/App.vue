@@ -8,6 +8,7 @@
             <Shop />
             <Footer />
             <BannerFooter />
+            <Social />
         </div>
     </div>
 </template>
@@ -18,6 +19,7 @@ import Footer from "./Footer/Footer.vue";
 import BannerFooter from "./Banners/BannerFooter.vue";
 import Categories from "./Banners/Categories.vue";
 import Shop from "./Shop/Shop.vue";
+import Social from "./Social/Social.vue";
 export default {
     components: {
         Navbar,
@@ -26,6 +28,7 @@ export default {
         BannerFooter,
         Categories,
         Shop,
+        Social
     },
 };
 </script>
