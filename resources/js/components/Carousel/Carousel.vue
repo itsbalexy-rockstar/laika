@@ -59,12 +59,13 @@
 </template>
 <script>
 export default {
-    data(){
-        return{
-            image1: '/images/image-1.jpg',
-            image2: '/images/image-2.jpg',
-            image3: '/images/image-3.jpg',
-        }
-    }
-}
+    data() {
+        return {
+            image1: "/images/image-1.jpg",
+            image2: "/images/image-2.jpg",
+            image3: "/images/image-3.jpg",
+        };
+    },
+};
 </script>
+<style></style>
